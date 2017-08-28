@@ -10,10 +10,10 @@ COLUMNS="$(printf '%*s\n' "${TERM_WIDTH}" '' | tr ' ' -)"
 function exch_bittrex() {
   EXCHNAME+=" Bittrex"
   CURR+=" BTC"
-  BUYEXCH="https://bittrex.com/api/v1.1/public/getticker?market=btc-ans"
-  BUYJSON="Ask"
-  SLLEXCH="https://bittrex.com/api/v1.1/public/getticker?market=btc-ans"
-  SLLJSON="Bid"
+  BUYEXCH+=" https://bittrex.com/api/v1.1/public/getticker?market=btc-ans"
+  BUYJSON+=" Ask"
+  SLLEXCH+=" https://bittrex.com/api/v1.1/public/getticker?market=btc-ans"
+  SLLJSON+=" Bid"
 }
 
 # set functions
