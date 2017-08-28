@@ -8,8 +8,8 @@ COLUMNS="$(printf '%*s\n' "${TERM_WIDTH}" '' | tr ' ' -)"
 
 # set exchange data as functions
 function exch_bittrex() {
-  EXCHNAME="${EXCHNAME} Bittrex"
-  CURR="${CURR} BTC"
+  EXCHNAME+=" Bittrex"
+  CURR+=" BTC"
   BUYEXCH="https://bittrex.com/api/v1.1/public/getticker?market=btc-ans"
   BUYJSON="Ask"
   SLLEXCH="https://bittrex.com/api/v1.1/public/getticker?market=btc-ans"
@@ -54,7 +54,7 @@ function zero_trail() {
 while getopts ":a:dhv" opt; do
   case ${opt} in
     a)
-      ANTSHARE="${ANTSHARE} $(echo ${OPTARG})"
+      ANTSHARE+=" $(echo ${OPTARG})"
       ;;
     d)
       DATE="$(date +%F\ %T)"
